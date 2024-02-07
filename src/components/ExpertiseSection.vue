@@ -7,8 +7,16 @@
       </div>
       <div class="section">
         <div class="content">
-          <div class="skill-card" v-for="(skill, indx) in category.skills" :key="indx">
-            <img :src="getImgUrl('assets/se_icons/', skill.icon)" :alt="skill.language + ' image'" class="card-icon" />
+          <div
+            class="skill-card"
+            v-for="(skill, indx) in category.skills"
+            :key="indx"
+          >
+            <img
+              :src="getImgUrl('assets/se_icons/', skill.icon)"
+              :alt="skill.language + ' image'"
+              class="card-icon"
+            />
           </div>
         </div>
       </div>
@@ -38,7 +46,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 #expertise {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .section {

@@ -5,12 +5,19 @@
     </div>
     <div class="section q-pt-lg q-pb-md q-px-md">
       <div class="text-h5 text-weight-bold">
-        <em>Proporciono todo lo que necesitas para crear tu sitio web perfecto.</em>
+        <em
+          >Proporciono todo lo que necesitas para crear tu sitio web
+          perfecto.</em
+        >
       </div>
     </div>
     <div class="section q-px-md">
       <div class="content">
-        <div class="service-card" v-for="(service, index) in services" :key="index">
+        <div
+          class="service-card"
+          v-for="(service, index) in services"
+          :key="index"
+        >
           <div class="q-mb-md">
             <q-icon :name="service.icon" class="card-icon" size="64px" />
           </div>
@@ -24,7 +31,13 @@
 
     <div class="section services-footer q-px-md">
       <div class="text-h5 text-weight-bold">
-        <q-btn unelevated rounded color="positive" label="Let's work together" to="/contact" />
+        <q-btn
+          unelevated
+          rounded
+          color="positive"
+          label="Let's work together"
+          to="/contact"
+        />
       </div>
     </div>
   </div>
@@ -47,7 +60,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 #services {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .services-section {

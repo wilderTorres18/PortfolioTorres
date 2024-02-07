@@ -5,9 +5,10 @@
         Trabajemos juntos
       </div>
       <div class="page-info q-my-lg">
-        ¿Tiene una aplicación web o un sitio web sencillo que necesita
-        ¿Se construirá para ti? ¿O simplemente quieres conversar sobre mis servicios? Suéltame
-        Envíe un mensaje a continuación y me comunicaré con usted de inmediato.
+        ¿Tiene una aplicación web o un sitio web sencillo que necesita ¿Se
+        construirá para ti? ¿O simplemente quieres conversar sobre mis
+        servicios? Suéltame Envíe un mensaje a continuación y me comunicaré con
+        usted de inmediato.
       </div>
 
       <ContactUsForm />

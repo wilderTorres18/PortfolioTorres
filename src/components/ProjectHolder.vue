@@ -1,111 +1,218 @@
 <template>
-  <div class="project-holder q-mb-xl" v-for="(project, index) in projects" :key="index" :style="{
-    backgroundColor: project.customStyle.background,
-    border: project.customStyle.border,
-  }" :class="{ 'project-holder-mutated': !project.showImage }">
+  <div
+    class="project-holder q-mb-xl"
+    v-for="(project, index) in projects"
+    :key="index"
+    :style="{
+      backgroundColor: project.customStyle.background,
+      border: project.customStyle.border,
+    }"
+    :class="{ 'project-holder-mutated': !project.showImage }"
+  >
     <div class="project-image" v-if="project.leftSided && project.showImage">
-      <img :src="getImgUrl(
-        'assets/',
-        project.imgs[randomNumber(0, project.imgs.length - 1)]
-      )
-        " alt="project preview image" class="left-sided-img" />
+      <img
+        :src="
+          getImgUrl(
+            'assets/',
+            project.imgs[randomNumber(0, project.imgs.length - 1)]
+          )
+        "
+        alt="project preview image"
+        class="left-sided-img"
+      />
     </div>
-    <div class="project-desc q-pa-md" :class="{ 'no-image': !project.showImage }" v-if="project.leftSided">
-      <div class="text-h6 text-weight-bold q-mb-md" :style="{
-        color: project.customStyle.btnColor,
-      }">
+    <div
+      class="project-desc q-pa-md"
+      :class="{ 'no-image': !project.showImage }"
+      v-if="project.leftSided"
+    >
+      <div
+        class="text-h6 text-weight-bold q-mb-md"
+        :style="{
+          color: project.customStyle.btnColor,
+        }"
+      >
         {{ project.header }}
       </div>
       <div>{{ project.desc }}</div>
       <div class="q-mt-lg" v-if="project?.desc2">{{ project.desc2 }}</div>
       <div class="q-mt-md">
-        <div v-for="(tech, indx) in project.technologies" :key="indx" class="technologies q-pr-sm">
+        <div
+          v-for="(tech, indx) in project.technologies"
+          :key="indx"
+          class="technologies q-pr-sm"
+        >
           <span>{{ tech }}</span>
           <span v-if="indx < project.technologies.length - 1">,</span>
         </div>
       </div>
       <div class="q-mt-lg">
-        <q-btn unelevated rounded no-caps label="Vista previa" :href="project.projectLink" target="_blank" class="q-mr-lg"
-          v-if="project?.projectLink" :style="{
+        <q-btn
+          unelevated
+          rounded
+          no-caps
+          label="Vista previa"
+          :href="project.projectLink"
+          target="_blank"
+          class="q-mr-lg"
+          v-if="project?.projectLink"
+          :style="{
             backgroundColor: project.customStyle.btnColor,
             color: '#ffffff',
-          }" />
-        <q-btn flat rounded no-caps :href="project.codeLink" target="_blank" v-if="project?.codeLink && !project.private"
+          }"
+        />
+        <q-btn
+          flat
+          rounded
+          no-caps
+          :href="project.codeLink"
+          target="_blank"
+          v-if="project?.codeLink && !project.private"
           :style="{
             color: project.customStyle.btnColor,
-          }">
-          <q-icon name="fas fa-arrow-up-right-from-square" size="18px" class="q-pr-sm" />
+          }"
+        >
+          <q-icon
+            name="fas fa-arrow-up-right-from-square"
+            size="18px"
+            class="q-pr-sm"
+          />
           Source Code
         </q-btn>
-        <q-btn flat rounded no-caps v-if="project.private" :style="{
-          color: project.customStyle.btnColor,
-        }">
+        <q-btn
+          flat
+          rounded
+          no-caps
+          v-if="project.private"
+          :style="{
+            color: project.customStyle.btnColor,
+          }"
+        >
           <q-icon name="fas fa-circle-info" size="18px" class="q-pr-sm" />
           Private Code
-          <q-tooltip :style="{
-            color: '#ffffff',
-            backgroundColor: project.customStyle.btnColor,
-          }" :offset="[10, 10]">
+          <q-tooltip
+            :style="{
+              color: '#ffffff',
+              backgroundColor: project.customStyle.btnColor,
+            }"
+            :offset="[10, 10]"
+          >
             <strong>Source code is private</strong>
           </q-tooltip>
         </q-btn>
       </div>
     </div>
 
-    <div class="project-image lt-sm" v-if="!project.leftSided && project.showImage">
-      <img :src="getImgUrl(
-        'assets/',
-        project.imgs[randomNumber(0, project.imgs.length - 1)]
-      )
-        " alt="project preview image" class="right-sided-img" />
+    <div
+      class="project-image lt-sm"
+      v-if="!project.leftSided && project.showImage"
+    >
+      <img
+        :src="
+          getImgUrl(
+            'assets/',
+            project.imgs[randomNumber(0, project.imgs.length - 1)]
+          )
+        "
+        alt="project preview image"
+        class="right-sided-img"
+      />
     </div>
-    <div class="project-desc q-pa-md" :class="{ 'no-image': !project.showImage }" v-if="!project.leftSided">
-      <div class="text-h6 text-weight-bold q-mb-md" :style="{
-        color: project.customStyle.btnColor,
-      }">
+    <div
+      class="project-desc q-pa-md"
+      :class="{ 'no-image': !project.showImage }"
+      v-if="!project.leftSided"
+    >
+      <div
+        class="text-h6 text-weight-bold q-mb-md"
+        :style="{
+          color: project.customStyle.btnColor,
+        }"
+      >
         {{ project.header }}
       </div>
       <div>{{ project.desc }}</div>
       <div class="q-mt-lg" v-if="project?.desc2">{{ project.desc2 }}</div>
       <div class="q-mt-md">
-        <div v-for="(tech, indx) in project.technologies" :key="indx" class="technologies q-pr-sm">
+        <div
+          v-for="(tech, indx) in project.technologies"
+          :key="indx"
+          class="technologies q-pr-sm"
+        >
           <span>{{ tech }}</span>
           <span v-if="indx < project.technologies.length - 1">,</span>
         </div>
       </div>
       <div class="q-mt-lg">
-        <q-btn unelevated rounded no-caps label="Preview" :href="project.projectLink" target="_blank" class="q-mr-lg"
-          v-if="project?.projectLink" :style="{
+        <q-btn
+          unelevated
+          rounded
+          no-caps
+          label="Preview"
+          :href="project.projectLink"
+          target="_blank"
+          class="q-mr-lg"
+          v-if="project?.projectLink"
+          :style="{
             backgroundColor: project.customStyle.btnColor,
             color: '#ffffff',
-          }" />
-        <q-btn flat rounded no-caps :href="project.codeLink" target="_blank" v-if="project?.codeLink && !project.private"
+          }"
+        />
+        <q-btn
+          flat
+          rounded
+          no-caps
+          :href="project.codeLink"
+          target="_blank"
+          v-if="project?.codeLink && !project.private"
           :style="{
             color: project.customStyle.btnColor,
-          }">
-          <q-icon name="fas fa-arrow-up-right-from-square" size="18px" class="q-pr-sm" />
+          }"
+        >
+          <q-icon
+            name="fas fa-arrow-up-right-from-square"
+            size="18px"
+            class="q-pr-sm"
+          />
           Source Code
         </q-btn>
-        <q-btn flat rounded no-caps v-if="project.private" :style="{
-          color: project.customStyle.btnColor,
-        }">
+        <q-btn
+          flat
+          rounded
+          no-caps
+          v-if="project.private"
+          :style="{
+            color: project.customStyle.btnColor,
+          }"
+        >
           <q-icon name="fas fa-circle-info" size="18px" class="q-pr-sm" />
           Private Code
-          <q-tooltip :style="{
-            color: '#ffffff',
-            backgroundColor: project.customStyle.btnColor,
-          }" :offset="[10, 10]">
+          <q-tooltip
+            :style="{
+              color: '#ffffff',
+              backgroundColor: project.customStyle.btnColor,
+            }"
+            :offset="[10, 10]"
+          >
             <strong>Source code is private</strong>
           </q-tooltip>
         </q-btn>
       </div>
     </div>
-    <div class="project-image gt-xs" v-if="!project.leftSided && project.showImage">
-      <img :src="getImgUrl(
-        'assets/',
-        project.imgs[randomNumber(0, project.imgs.length - 1)]
-      )
-        " alt="project preview image" class="right-sided-img" />
+    <div
+      class="project-image gt-xs"
+      v-if="!project.leftSided && project.showImage"
+    >
+      <img
+        :src="
+          getImgUrl(
+            'assets/',
+            project.imgs[randomNumber(0, project.imgs.length - 1)]
+          )
+        "
+        alt="project preview image"
+        class="right-sided-img"
+      />
     </div>
   </div>
 </template>

@@ -3,8 +3,9 @@
     <div class="support-me q-py-xl">
       <div class="page-header text-h3 text-weight-bold q-mt-lg">Apoyame</div>
       <div class="page-info q-my-lg">
-        Si desea comprarme café o hacer una donación, no dude en utilizar las siguientes opciones para apoyarme. Lo
-        apreciaré mucho. gracias de antemano
+        Si desea comprarme café o hacer una donación, no dude en utilizar las
+        siguientes opciones para apoyarme. Lo apreciaré mucho. gracias de
+        antemano
       </div>
 
       <div class="content">
@@ -24,9 +25,16 @@
         <div class="pp-header q-mt-xl">
           <img src="../assets/paypal-logo-200px.png" alt="paypal logo" />
         </div>
-        <q-btn unelevated rounded no-caps class="pp-btn q-mt-md q-ml-lg"
-          href="https://www.paypal.com/donate/?hosted_button_id=KKJT2WZYH97YY" target="_blank" icon="fab fa-paypal"
-          label="Donate" />
+        <q-btn
+          unelevated
+          rounded
+          no-caps
+          class="pp-btn q-mt-md q-ml-lg"
+          href="https://www.paypal.com/donate/?hosted_button_id=KKJT2WZYH97YY"
+          target="_blank"
+          icon="fab fa-paypal"
+          label="Donate"
+        />
       </div>
     </div>
   </div>

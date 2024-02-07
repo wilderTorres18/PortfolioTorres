@@ -6,41 +6,64 @@
           <q-item class="q-pl-none">
             <q-item-section avatar>
               <q-avatar size="96px">
-                <img :src="getImgUrl(
-                  'assets/profile_pics/',
-                  pics[randomNumber(0, pics.length - 1)]
-                )
-                  " alt="user image" />
+                <img
+                  :src="
+                    getImgUrl(
+                      'assets/profile_pics/',
+                      pics[randomNumber(0, pics.length - 1)]
+                    )
+                  "
+                  alt="user image"
+                />
               </q-avatar>
             </q-item-section>
             <q-item-section class="q-ml-none">
               <q-item-label class="text-h6 text-weight-bold">
                 Wilder Chero Torres
               </q-item-label>
-              <q-item-label caption> wildercherotorres18@gmail.com </q-item-label>
+              <q-item-label caption>
+                wildercherotorres18@gmail.com
+              </q-item-label>
             </q-item-section>
           </q-item>
         </q-list>
       </div>
       <div class="content-div">
         <div class="about-header text-h4 text-weight-bold">Sobre mi</div>
-        <div class="q-mt-md" style="font-family: 'Roboto', sans-serif; font-size: 16px; color: #333;">
+        <div
+          class="q-mt-md"
+          style="
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: #333;
+          "
+        >
           <p>
-            Soy un <b>Ingeniero de software </b> de Peru. He estado creando aplicaciones
-            web con el objetivo de hacerlas simples y fáciles de usar.
+            Soy un <b>Ingeniero de software </b> de Peru. He estado creando
+            aplicaciones web con el objetivo de hacerlas simples y fáciles de
+            usar.
           </p>
           <p>
-            En mis tiempos libre leo, escucho musica o veo cursos de tecnologia que me interesen.
+            En mis tiempos libre leo, escucho musica o veo cursos de tecnologia
+            que me interesen.
           </p>
           <p>
             Puedes encontrarme en
-            <a href="https://www.linkedin.com/in/wilder-torres/" target="_blank" rel="noopener noreferrer"
-              class="href-link text-primary">
+            <a
+              href="https://www.linkedin.com/in/wilder-torres/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="href-link text-primary"
+            >
               Linkedin
             </a>
             or
-            <a href="https://github.com/wilderTorres18" target="_blank" rel="noopener noreferrer"
-              class="href-link text-primary">
+            <a
+              href="https://github.com/wilderTorres18"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="href-link text-primary"
+            >
               GitHub
             </a>
             donde construyo proyectos de aplicaciones web como este Portafolio.
@@ -69,7 +92,12 @@
 
             <span class="sub-label">
               <span class="gt-xs">Lenguajes</span>
-              <q-icon name="fas fa-language" size="18px" style="padding-right: 2px" class="lt-sm" />
+              <q-icon
+                name="fas fa-language"
+                size="18px"
+                style="padding-right: 2px"
+                class="lt-sm"
+              />
             </span>
             <span style="font-style: italic">Español</span>
             <span class="q-px-sm">
@@ -81,11 +109,15 @@
       </div>
       <div class="image-div gt-xs">
         <q-avatar size="300px">
-          <img :src="getImgUrl(
-            'assets/profile_pics/',
-            pics[randomNumber(0, pics.length - 1)]
-          )
-            " alt="user image" />
+          <img
+            :src="
+              getImgUrl(
+                'assets/profile_pics/',
+                pics[randomNumber(0, pics.length - 1)]
+              )
+            "
+            alt="user image"
+          />
         </q-avatar>
       </div>
     </div>
@@ -119,7 +151,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 #about-me {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 

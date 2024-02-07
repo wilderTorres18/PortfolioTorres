@@ -1,12 +1,24 @@
 <template>
   <footer id="footer" class="footer">
-    <div class="call-to-action q-pt-lg q-pb-xl" v-if="currentRoute !== '/contact'">
+    <div
+      class="call-to-action q-pt-lg q-pb-xl"
+      v-if="currentRoute !== '/contact'"
+    >
       <div class="text-h4 text-weight-bold q-mt-lg">Ponte en Contacto</div>
       <div class="q-mt-md">
-        Ponte en contacto y descubre más sobre mis servicios o envíame un mensaje, trabajamos juntos.
+        Ponte en contacto y descubre más sobre mis servicios o envíame un
+        mensaje, trabajamos juntos.
       </div>
       <div class="q-mt-md">
-        <q-btn unelevated rounded no-caps color="white" text-color="primary" label="hablemos" to="/contact" />
+        <q-btn
+          unelevated
+          rounded
+          no-caps
+          color="white"
+          text-color="primary"
+          label="hablemos"
+          to="/contact"
+        />
       </div>
     </div>
     <div class="section" :class="{ 'q-pt-lg': currentRoute === '/contact' }">
@@ -16,7 +28,10 @@
             <q-item class="q-pl-none">
               <q-item-section avatar>
                 <q-avatar size="64px">
-                  <img src="../assets/profile_pics/dp_primary.jpg" alt="user image" />
+                  <img
+                    src="../assets/profile_pics/dp_primary.jpg"
+                    alt="user image"
+                  />
                 </q-avatar>
               </q-item-section>
               <q-item-section>
@@ -39,8 +54,14 @@
           </div>
         </div>
         <div class="social-links">
-          <a :href="social.link" target="_blank" rel="noopener noreferrer" class="href-link q-pr-md"
-            v-for="(social, index) in socials" :key="index">
+          <a
+            :href="social.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="href-link q-pr-md"
+            v-for="(social, index) in socials"
+            :key="index"
+          >
             <q-icon :name="social.logo" color="white" size="24px" />
           </a>
         </div>
@@ -64,7 +85,9 @@
           </a>
         </div>
         <div class="nav-btn">
-          <a class="q-pr-sm" clickable @click="scrollTo('skills')"> Habilidades </a>
+          <a class="q-pr-sm" clickable @click="scrollTo('skills')">
+            Habilidades
+          </a>
         </div>
         <div class="nav-btn">
           <a class="q-pr-sm" clickable @click="scrollTo('testimonials')">
@@ -92,9 +115,19 @@
       <div class="q-mt-md">
         &copy;
         {{ year }}
-        <q-icon name="fas fa-circle" color="white" size="5px" style="padding: 0 6px" />
-        <a href="https://www.linkedin.com/in/wilder-torres/" target="_blank" rel="noopener noreferrer" class="href-link"
-          style="color: #ffffff">
+        <q-icon
+          name="fas fa-circle"
+          color="white"
+          size="5px"
+          style="padding: 0 6px"
+        />
+        <a
+          href="https://www.linkedin.com/in/wilder-torres/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="href-link"
+          style="color: #ffffff"
+        >
           Gideon Kimaiyo, adaptado por Wilder Torres
         </a>
       </div>
