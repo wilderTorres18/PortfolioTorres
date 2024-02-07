@@ -10,6 +10,7 @@
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
     "build": "quasar build",
+    "vercel-deploy": "npm run build && mv dist/spa public",
     "start": "quasar serve dist/spa --history"
   },
   "dependencies": {
