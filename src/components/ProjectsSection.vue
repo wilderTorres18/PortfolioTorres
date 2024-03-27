@@ -3,15 +3,8 @@
     <div class="page-header text-h4 text-weight-bold">Algunos proyectos</div>
     <ProjectHolder :projects="projects" />
 
-    <q-btn
-      unelevated
-      rounded
-      color="primary"
-      class="q-mb-xl"
-      href="https://github.com/wilderTorres18?tab=repositories"
-      target="_blank"
-      label="View All Projects"
-    />
+    <q-btn unelevated rounded color="primary" class="q-mb-xl" href="https://github.com/wilderTorres18?tab=repositories"
+      target="_blank" label="Ver todos los proyectos" />
   </div>
 </template>
 
