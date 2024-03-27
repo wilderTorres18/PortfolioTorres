@@ -62,7 +62,7 @@ export const PROJECTS = [
     showImage: true,
     private: false,
     header: "Movie Hub",
-    imgs: ["task_manager.jpg"],
+    imgs: ["task_manager.jpg", "twilight.png", "through.png"],
     codeLink: "https://github.com/wilderTorres18/movieHub",
     projectLink: "https://moviehub-wilder.netlify.app/",
     desc: "MovieHub es una aplicación web que te permite explorar y descubrir una amplia variedad de películas. Con una interfaz intuitiva y atractiva, MovieHub te brinda acceso a una extensa base de datos de películas, donde podrás buscar por título.",
